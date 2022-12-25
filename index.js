@@ -17,6 +17,13 @@ const MessageRouter = require("./router/message.js");
 
 Server.use(MessageRouter);
 
+Server.get("/", (req, res) => {
+  res.status(200).json({
+    msg: "This is saysomething's server",
+    author: "Imanuel Antonio",
+  });
+});
+
 //  Server listen
 
 Server.listen(port, (err) => {
